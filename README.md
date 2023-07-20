@@ -4,14 +4,14 @@ The project Buid with Angular , Rest Api and Django
 
 After set up the virtualenv
 
-cd PopCorn
+1.```cd PopCorn```
 
-pip install -r requirements.txt
+2.```pip install -r requirements.txt```
 
-Then run : python manage.py runserver 
+3.```python manage.py runserver ```
 
-cd ..
+4.```cd ..```
 
-cd Watchlist 
+5.```cd Watchlist ```
 
-ng serve -o
+6.```ng serve -o```
