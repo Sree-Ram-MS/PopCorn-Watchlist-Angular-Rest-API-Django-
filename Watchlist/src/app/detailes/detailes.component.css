@@ -1,0 +1,77 @@
+.card-img-top {
+    max-height: 300px;
+    overflow: hidden;
+}
+.card-img-main {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.card-title a:link {
+    font-size: 22px;
+    background-color: transparent;
+    color: #000000;
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.card {
+    height: 400px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.card-sub {
+    font-size: 12px;
+}
+.title {
+    font-size: 40px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+@-webkit-keyframes bg-animate {
+  0% {
+    background-position: right;
+  }
+  25% {
+    background-position: top;
+  }
+  50% {
+    background-position: left;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
+@keyframes bg-animate {
+  0% {
+    background-position: right;
+  }
+  25% {
+    background-position: top;
+  }
+  50% {
+    background-position: left;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: bg-animate 4s infinite alternate;
+          animation: bg-animate 4s infinite alternate;
+}
+.wrapper.pink {
+  background: linear-gradient(45deg, #FF4E50 0%, #0E7AFF 100%);
+  background-size: 250%;
+}
+

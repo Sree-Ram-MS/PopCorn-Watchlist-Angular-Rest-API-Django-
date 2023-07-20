@@ -1,0 +1,59 @@
+<div [style.background-image]="'url(assets/images/' + currentBackgroundImage + ')'" style="background-size: cover;background-position: center;background-repeat: no-repeat;">
+    <section class="ftco-section" style="padding-top: 60px;padding-bottom:auto;">
+		<div class="container">
+			<div class="row justify-content-center">	
+				<div class="col-md-6 text-center mb-5">
+					<h1 class="heading-section">🎬PopCorn WatchList🍿</h1>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Don't Have an account?</h3>
+		      	<form [formGroup]="signform" (ngSubmit)="register()" class="signin-form">
+		      		<div class="form-group">
+		      			<input type="text" class="form-control" formControlName="username" placeholder="Username" required>
+                        <div class="alert alert-danger" *ngIf="signform.get('username')?.invalid && signform.get('username')?.touched">
+                            Enter Valid Username
+                        </div>
+		      		</div>
+		      		<div class="form-group">
+		      			<input type="email" class="form-control" formControlName="email" placeholder="E-mail" required>
+                          <div class="alert alert-danger" *ngIf="signform.get('email')?.invalid && signform.get('email')?.touched">
+                            Enter Valid Email
+                        </div>
+		      		</div>
+	            <div class="form-group">
+	              <input id="password-field" type="password" formControlName="password" class="form-control" placeholder="Password" required>
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+	            <div class="form-group">
+	              <input id="cpassword-field" type="password" formControlName="password2" class="form-control" placeholder="Confirm Password" required>
+	              <span toggle="#cpassword-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+	            <div class="form-group">
+	            	<button type="submit" [disabled]="signform.invalid" class="form-control btn btn-primary submit px-3">Sign In</button>
+	            </div>
+	            <div class="form-group d-md-flex">
+	            	<div class="w-50">
+		            	<label class="checkbox-wrap checkbox-primary">Remember Me
+									  <input type="checkbox" checked>
+									  <span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="w-60 text-md-right">
+									Already have an account?<a routerLInk="" style="color: #fff">LogIn</a>
+								</div>
+	            </div>
+	          </form>
+	          <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+	          <div class="social d-flex text-center">
+	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
+	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
+	          </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

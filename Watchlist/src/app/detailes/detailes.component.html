@@ -1,0 +1,45 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" rel="stylesheet"  crossorigin="anonymous">
+<link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet"  crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet"  crossorigin="anonymous">
+
+
+
+
+<div class="contain mt-5 wrapper pink">
+    <div class="row p-5">
+        <div class="col-lg-2" *ngIf="getMovieDetailResult.poster_path">
+                <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailResult.poster_path }}" class="card-img-main" >
+        </div>
+        <div class="col-lg-10 mt-1 p-4 pl-2 border rounded">
+                <h1 class="btn btn-info  mb-2 title">{{getMovieDetailResult.original_title}}</h1>
+                <p class="mt-3 mb-3">{{getMovieDetailResult.overview}}</p>
+                <a class="btn btn-danger " href="https://www.themoviedb.org/video/play?key={{getMovieVideoResult}}" target="_blank">watch trailer</a>
+        </div>
+                <section class="bg-light py-4 my-5 wrapper pink">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="mb-3 btn btn-success title float-right">Top Cast</h2>
+                            </div>
+                
+                            <div class="col-md-2 col-lg-2" *ngFor="let c of getMovieCastResult">
+                                <div class="card my-3" *ngIf="c.profile_path">
+                
+                                    <img src="https://image.tmdb.org/t/p/original/{{ c.profile_path}}" class="card-img-top" alt="thumbnail">
+                
+                                    <div class="card-body">
+                                        <h3 class="card-title"><a href="#" class="text-secondary display-6">{{c.original_name}}</a></h3>
+                                        <a href="#"  class="btn btn-primary card-sub">{{c.character}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            
+                        </div>
+                    </div>
+                </section>
+  
+    </div>
+</div>

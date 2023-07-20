@@ -1,0 +1,118 @@
+.carousel-inner
+{
+    height: 700px;
+}
+
+.carousel-inner .carousel-item img
+{
+    height: 700px;
+    object-fit: cover;
+}
+
+.carousel-caption h2
+{
+    color: #E50914;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.carousel-caption p 
+{
+    color: #ffffff;
+}
+
+.rowposter{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.rowimg
+{
+    max-height: 100px;
+    object-fit: contain;
+    width: 100%;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 7px;
+}
+
+.rowimg:hover
+{
+    transform: scale(1.09);
+    cursor: pointer;
+}
+
+.largeposter{
+    max-height: 300px;
+}
+
+.rowposter::-webkit-scrollbar
+{
+    display: none;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+@-webkit-keyframes bg-animate {
+  0% {
+    background-position: right;
+  }
+  25% {
+    background-position: top;
+  }
+  50% {
+    background-position: left;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
+@keyframes bg-animate {
+  0% {
+    background-position: right;
+  }
+  25% {
+    background-position: top;
+  }
+  50% {
+    background-position: left;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
+.bgc {
+  display: flex;
+  min-height: 10px;
+  -webkit-animation: bg-animate 4s infinite alternate;
+          animation: bg-animate 4s infinite alternate;
+}
+.bgc.pink {
+    background: linear-gradient(45deg, #FF4E50 0%, #0E7AFF 100%);
+    background-size: 250%;
+  }
+  .bgc.blue {
+    background: linear-gradient(45deg, #00a8ff 0%, #6c5ce7 100%);
+    background-size: 250%;
+  }
+  
+  .bgc.gy {
+    background: linear-gradient(45deg, #00b894 0%, #fdcb6e 100%);
+    background-size: 250%;
+  }
+
+  .bgc.rb {
+    background: linear-gradient(45deg, #e74c3c 0%, #3498db 100%);
+    background-size: 250%;
+  }
+  
+  
+    
+.text-white {
+   
+    font-size: large;
+    color: #ffffff;
+    padding:1rem;
+    
+}

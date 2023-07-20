@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<div class="container-fluid bg-dark text-white py-5">
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            
+            <form [formGroup]="searchForm" (ngSubmit)="submitForm()" class="p-4  bg-primary">
+                <div class="bar">
+                    <input class="searchbar" type="text" title="Search" formControlName="movieName" placeholder="     Search Movie Here ..."
+                        style="font-size: 20px;">
+                    <button class="btn btn-primary btn-circle">
+                        <i class="fa fa-search"></i>
+                      </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container border">
+	
+	<div class="movie-card" *ngFor="let s of searchResult" >
+		<div class="movie-header" style="background: url('https://image.tmdb.org/t/p/original/{{ s.poster_path }}');background-size:cover;" [routerLink]="['/Detailes',s.id]">
+		</div><!--movie-header-->
+		<div class="movie-content">
+			<div class="movie-content-header">
+				<a href="#">
+					<h3 class="movie-title">{{s.original_title}}</h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+		</div>
+	</div><!--movie-content-->
+</div>
